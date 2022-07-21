@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=IMjNeZV9zypSRSddfW2L
+    ports:
+      - "1433:1433"
+
+  tests:
+    depends_on:
+      - db
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src 
+      - ./tests/jest:/app/tests/jest 
+    entrypoint: ["./wait-for-it.sh", "db:1433", "-t", "120", "--", "npm", "run", "test"]
+    environment:
+      - SA_PASSWORD=IMjNeZV9zypSRSddfW2L
+      - DB_SERVER=db
+  
+  
+      
