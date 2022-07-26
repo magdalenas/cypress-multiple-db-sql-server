@@ -22,6 +22,3 @@ services:
     environment:
       - SA_PASSWORD=IMjNeZV9zypSRSddfW2L
       - DB_SERVER=db
-  
-  
-      

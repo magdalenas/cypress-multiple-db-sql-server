@@ -1,4 +1,4 @@
 import { execSql } from './sqlServerHelper';
-export {
-  execSql,
-};
+import command from './command';
+import plugin from './plugin';
+export { execSql, command as sqlQueryCommand, plugin as sqlQueryPlugin };

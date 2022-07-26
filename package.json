@@ -1,11 +1,14 @@
 {
   "name": "cypress-multiple-db-sql-server",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Allows to connect to multiple dbs in MS SQL Server",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "keywords": [
     "sql",
-    "server"
+    "server",
+    "query",
+    "cypress"
   ],
   "scripts": {
     "build": "tsc",
