@@ -2,6 +2,10 @@
   "name": "cypress-multiple-db-sql-server",
   "version": "0.0.1",
   "description": "Allows to connect to multiple dbs in MS SQL Server",
+  "repository": "https://github.com/magdalenas/cypress-multiple-db-sql-server",
+  "bugs": {
+    "url": "https://github.com/magdalenas/cypress-multiple-db-sql-server/issues"
+  },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "keywords": [
