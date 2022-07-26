@@ -1,0 +1,16 @@
+{
+  "name": "cypress-sql-tests",
+  "version": "1.0.0",
+  "description": "Test checking if the plugin works",
+  "scripts": {
+    "test": "npx cypress run --e2e",
+    "test:ui": "npx cypress open --e2e",
+    "copy": "cp ../../lib/* ./node_modules/cypress-multiple-db-sql-server/"
+  },
+  "author": "Magdalena Strzałkowska",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.3.1",
+    "cypress-multiple-db-sql-server": "^0.0.1"
+  }
+}
