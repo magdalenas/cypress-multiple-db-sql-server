@@ -19,7 +19,7 @@ export default defineConfig({
             password: 'IMjNeZV9zypSRSddfW2L'
           }
         },
-        server: 'localhost',
+        server: 'db',
         options: {
           database: '',
           encrypt: true,

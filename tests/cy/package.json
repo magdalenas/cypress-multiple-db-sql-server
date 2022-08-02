@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^10.3.1",
-    "cypress-multiple-db-sql-server": "^0.0.1"
-  }
+    "cypress-multiple-db-sql-server": "^1.0.0"
+  },
+  "type": "module"
 }

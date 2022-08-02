@@ -9,7 +9,7 @@ services:
     ports:
       - "1433:1433"
 
-  tests:
+  unit-tests:
     depends_on:
       - db
     build: 
@@ -22,3 +22,13 @@ services:
     environment:
       - SA_PASSWORD=IMjNeZV9zypSRSddfW2L
       - DB_SERVER=db
+
+  cypress-tests:
+    depends_on:
+      - db
+    build: 
+      context: ./tests/cy/
+      dockerfile: Dockerfile
+    volumes:
+      - ./tests/cy/cypress:/app/cypress 
+    entrypoint: ["./wait-for-it.sh", "db:1433", "-t", "120", "--", "npm", "run", "test"]
