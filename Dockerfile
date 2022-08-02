@@ -1,4 +1,5 @@
-FROM cypress/base:16.14.2
+FROM node:16-alpine3.16
+RUN apk update && apk add bash
 
 WORKDIR /app
 
